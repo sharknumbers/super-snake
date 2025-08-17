@@ -1,11 +1,11 @@
 # Snake Game JavaScript
 
-[![CI/CD Pipeline](https://github.com/YOUR_USERNAME/YOUR_REPO_NAME/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/YOUR_USERNAME/YOUR_REPO_NAME/actions/workflows/ci-cd.yml)
-[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live%20Demo-blue)](https://YOUR_USERNAME.github.io/YOUR_REPO_NAME/)
+[![CI/CD Pipeline](https://github.com/sharknumbers/super-snake/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/sharknumbers/super-snake/actions/workflows/ci-cd.yml)
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live%20Demo-blue)](https://sharknumbers.github.io/super-snake/)
 
 A classic Snake game implemented in JavaScript, HTML, and CSS with modern web technologies, comprehensive testing, and automated CI/CD deployment.
 
-## 🎮 [Play the Game](https://YOUR_USERNAME.github.io/YOUR_REPO_NAME/)
+## 🎮 [Play the Game](https://sharknumbers.github.io/super-snake/)
 
 ## Features
 
@@ -37,8 +37,8 @@ A classic Snake game implemented in JavaScript, HTML, and CSS with modern web te
 
 ```bash
 # Clone the repository
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
-cd YOUR_REPO_NAME
+git clone https://github.com/sharknumbers/super-snake.git
+cd super-snake
 
 # Install dependencies
 npm install
@@ -92,7 +92,7 @@ npm test
 ├── snake.js             # Game logic
 ├── snake.test.js        # Unit tests
 ├── style.css            # Game styling
-├── vite.config.js       # Vite configuration
+├── vite.config.mjs      # Vite configuration
 ├── vitest.config.js     # Test configuration
 └── package.json         # Project dependencies and scripts
 ```
@@ -142,7 +142,3 @@ This project is open source and available under the [MIT License](LICENSE).
 - Original concept inspired by the classic Snake game
 - Built with modern web development best practices
 - Comprehensive testing and CI/CD implementation
-
----
-
-**Note**: Remember to replace `YOUR_USERNAME` and `YOUR_REPO_NAME` with your actual GitHub username and repository name in the URLs above.
