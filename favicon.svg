@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Snake Favicon</title>
+</head>
+<body>
+    <svg width="32" height="32" xmlns="http://www.w3.org/2000/svg">
+        <!-- Snake body -->
+        <rect x="4" y="12" width="8" height="8" fill="#4CAF50" rx="2"/>
+        <rect x="12" y="12" width="8" height="8" fill="#45a049" rx="2"/>
+        <rect x="20" y="12" width="8" height="8" fill="#4CAF50" rx="2"/>
+        
+        <!-- Snake head -->
+        <rect x="20" y="4" width="8" height="8" fill="#2E7D32" rx="2"/>
+        
+        <!-- Eyes -->
+        <circle cx="22" cy="6" r="1" fill="white"/>
+        <circle cx="26" cy="6" r="1" fill="white"/>
+        <circle cx="22" cy="6" r="0.5" fill="black"/>
+        <circle cx="26" cy="6" r="0.5" fill="black"/>
+        
+        <!-- Food -->
+        <circle cx="8" cy="24" r="3" fill="#FF5722"/>
+    </svg>
+</body>
+</html>

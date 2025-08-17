@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Snake Game - JavaScript</title>
+    <meta name="description" content="A classic Snake game implemented in JavaScript with modern web technologies">
+    <meta name="author" content="Snake Game JavaScript">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    
+    <!-- Add stylesheet -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- Game container holds canvas and score displays -->
+    <div class="game-container">
+      <canvas id="snake" width="608" height="608"></canvas>
+      <div id="score" class="score">Score: 0</div>
+      <div id="high-score" class="high-score">Best: 0</div>
+      <div id="pause-overlay" class="paused-overlay" style="display: none;">
+        <div>PAUSED</div>
+        <div style="font-size: 14px; margin-top: 10px;">Press 'P' to resume</div>
+      </div>
+    </div>
+
+    <!-- Game instructions -->
+    <div style="text-align: center; margin-top: 20px; color: #fff; font-family: Arial, sans-serif;">
+      <p>Use arrow keys to control the snake • Press 'P' to pause</p>
+    </div>
+
+    <!-- Load the game logic -->
+    <script type="module" src="./snake.js"></script>
+  </body>
+</html>

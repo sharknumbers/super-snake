@@ -1,0 +1,169 @@
+body {
+    background-color: #1a3c5e; /* Dark blue background */
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent scrolling on mobile */
+    touch-action: none; /* Disable browser handling of touch gestures */
+    color: white;
+}
+
+.game-container {
+    position: relative;
+    max-width: 100%;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    background: linear-gradient(to bottom, #1e5799 0%, #207cca 51%, #2989d8 100%); /* Blue gradient for tank effect */
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 0, 255, 0.3), inset 0 0 50px rgba(0, 0, 255, 0.2);
+    border: 8px solid #0a2744;
+    position: relative;
+}
+
+/* Shark icons around the frame */
+.shark-top, .shark-bottom, .shark-left, .shark-right, .shark-bottom-left, .shark-bottom-right {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-image: url('img/shark.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 10;
+    filter: drop-shadow(0 0 8px rgba(0, 150, 255, 0.7));
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Shark hover effects for more advanced look */
+.shark-top:hover, .shark-bottom:hover, .shark-left:hover, .shark-right:hover,
+.shark-bottom-left:hover, .shark-bottom-right:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 12px rgba(0, 200, 255, 0.9)) brightness(1.2);
+}
+
+.shark-top {
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.shark-bottom {
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%) rotate(180deg);
+}
+
+.shark-left {
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%) rotate(-90deg);
+}
+
+.shark-right {
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+}
+
+.shark-bottom-left {
+    bottom: -20px;
+    left: -20px;
+    transform: rotate(-135deg);
+}
+
+.shark-bottom-right {
+    bottom: -20px;
+    right: -20px;
+    transform: rotate(135deg);
+}
+
+/* Canvas styling for tank effect */
+canvas {
+    border: 5px solid #0a2744;
+    display: block;
+    margin: 0 auto;
+    background: linear-gradient(to bottom, #7db9e8 0%, #207cca 49%, #1e5799 100%); /* Blue gradient for water */
+    max-width: 100%;
+    max-height: 80vh;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5), inset 0 0 100px rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Score display with shark icon */
+.score, .high-score {
+    font-size: 24px;
+    margin-top: 15px;
+    text-align: center;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 10px;
+    background-color: rgba(10, 39, 68, 0.7);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.score::before, .high-score::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url('img/shark-small.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+}
+
+.high-score {
+    color: #4fc3f7;
+    margin-top: 5px;
+}
+
+.paused-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it appears above all other elements */
+    border-radius: 15px;
+    text-align: center;
+    user-select: none; /* Prevent text selection */
+    pointer-events: auto; /* Allow interaction if needed */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .score, .high-score {
+        font-size: 18px;
+    }
+    
+    canvas {
+        border-width: 3px;
+    }
+    
+    .game-container {
+        padding: 20px;
+    }
+    
+    .shark-top, .shark-bottom, .shark-left, .shark-right, .shark-bottom-left, .shark-bottom-right {
+        width: 30px;
+        height: 30px;
+    }
+}
